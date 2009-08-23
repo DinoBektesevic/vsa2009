@@ -13,5 +13,10 @@ for root, files, dirs in os.walk(fullpath):
         files=f.readlines()
 ##        if
         print files
-##        for lines in files:
+        for lines in files:
+        c=c+1
+        if c==43:
+            gica1=lines[59:69]
+            gica2=lines[72:82]
+            
             
