@@ -1,14 +1,15 @@
 import os
 import shutil
 
-fullpath='C:/Documents and Settings/Neven Golenic/Desktop/mire/'
+fullpath='C:/Python24/mire/'
 
+gice=open(fullpath+'output.txt','w')
 from os.path import join,getsize
 for root, files, dirs in os.walk(fullpath):
     for images in files:
         zv = images
         ime_zv = zv[:-5]
-##	print ime_zv
+	print ime_zv
         f = open(fullpath+zv)
         gice.write(str(ime_zv)+'           ')
 
@@ -23,4 +24,4 @@ for root, files, dirs in os.walk(fullpath):
                 gice.write(gica1+'    '+gica2+'\n')
             
         f.close()
-        gice.close()
+gice.close()
